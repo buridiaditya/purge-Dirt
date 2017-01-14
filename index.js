@@ -11,7 +11,7 @@
     geocoder.geocode({'location': pos}, function(results, status) {
       if (status === 'OK') {
         if (results[1]) { 
-          document.getElementById(id).innerHTML(results[1].formatted_address);
+          document.getElementById(id).innerHTML = (results[1].formatted_address);
         } else {
           window.alert('No results found');
         }
