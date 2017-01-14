@@ -20,6 +20,7 @@ var x = document.getElementById("demo");
 		  zoom: 4,
 		  center: uluru
 		});
+    
 		var geocoder = new google.maps.Geocoder;
         var infowindow = new google.maps.InfoWindow;
         // iniMapSave(position.coords);
