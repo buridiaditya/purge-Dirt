@@ -20,13 +20,15 @@ var x = document.getElementById("demo");
 		  zoom: 4,
 		  center: uluru
 		});
-    
+
 		var geocoder = new google.maps.Geocoder;
         var infowindow = new google.maps.InfoWindow;
         // iniMapSave(position.coords);
         document.getElementById('Submit').addEventListener('click', function() {
           geocodeLatLng(position,geocoder, map, infowindow);
         });
+    document.cookie = "lat = " + position.coords.latitude;
+    document.cookie = "lang = " + position.coords.longitude;
 	}
 	function geocodeLatLng(position,geocoder, map, infowindow) {
         var latlng = {lat: position.coords.latitude, lng: position.coords.longitude};
