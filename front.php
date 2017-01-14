@@ -40,7 +40,7 @@
       };
     </script>
 
-    <script src="back1.js">  </script>
+    <script src="index.js">  </script>
     <?php
       if(isset($_COOKIE['lang']) && isset($_COOKIE['lat']) && isset($_COOKIE['email'])) {
         echo $_COOKIE['lat'] . " " . $_COOKIE['lang'] . " " . $_COOKIE['email'];
