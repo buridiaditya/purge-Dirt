@@ -5,10 +5,10 @@
 	        x.innerHTML = "Geolocation is not supported by this browser.";
 	    }
 	}
-  function getLocation(lati,lungi,id){
+  function getLocationName(lati,lungi,id){
     var pos = {lat : lati,lng : lungi};
     var geocoder = new google.maps.Geocoder;
-    geocoder.geocode({'location': latlng}, function(results, status) {
+    geocoder.geocode({'location': pos}, function(results, status) {
       if (status === 'OK') {
         if (results[1]) { 
           document.getElementById(id).innerHTML(results[1].formatted_address);
@@ -28,8 +28,8 @@
 
   function cleaner(){
     /// FILE STREAM ///
-    val latlng = {lat : 12 , lng: 12};
-    val email = "buridiaditya@gmail.com";
+    var latlng = {lat : 12 , lng: 12};
+    var email = "buridiaditya@gmail.com";
     var i = 0;
     var geocoder = new google.maps.Geocoder;
     geocoder.geocode({'location': latlng}, function(results, status) {
