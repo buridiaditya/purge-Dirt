@@ -1,5 +1,3 @@
-var x = document.getElementById("demo");
-
 	function getLocation() {
 	    if (navigator.geolocation) {
 	        navigator.geolocation.getCurrentPosition(saveCookieAndSave);
@@ -15,12 +13,9 @@ var x = document.getElementById("demo");
   function cleaner(){
     /// FILE STREAM ///
     val latlng = {lat : 12 , lng: 12};
-    document.getElementById('1').addEventListener('click', function() {
-          setCleanerData(latlng);
-        });
-  }
-  function setCleanerData(latlng,id1){
-    var geocoder = new google.maps.Geocoder;
+    val email = "buridiaditya@gmail.com";
+    var i = 0;
+        var geocoder = new google.maps.Geocoder;
         geocoder.geocode({'location': latlng}, function(results, status) {
           if (status === 'OK') {
             if (results[1]) { 
@@ -32,8 +27,11 @@ var x = document.getElementById("demo");
             window.alert('Geocoder failed due to: ' + status);
           }
         });
+        document.getElementById('id'+(i+1).toString()).addEventListener('click', function() {
+              onClickCleaner(latlng,email);
+            });
   }
-  function onClickCleaner(uluru){
+  function onClickCleaner(uluru,email){
     var map = new google.maps.Map(document.getElementById('map'), {
       zoom: 4,
       center: uluru
@@ -56,5 +54,8 @@ var x = document.getElementById("demo");
           } else {
             window.alert('Geocoder failed due to: ' + status);
           }
+        });
+    document.getElementById('CLEAN SUCCESS').addEventListener('click', function() {
+          sendMail(email);
         });
   }
