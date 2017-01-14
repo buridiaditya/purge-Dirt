@@ -38,7 +38,7 @@
 		      console.log('Email: ' + profile.getEmail());
 		      document.cookie = "email = " + profile.getEmail();
 		    }
-			function getLocation() {
+			function nextPage() {
 			    if (navigator.geolocation) {
 			        navigator.geolocation.getCurrentPosition(saveCookie);
 			    }
@@ -67,7 +67,7 @@
 			}
 
 		</script>
-		<span style = "font-family: 'Cabin Sketch'; font-size: 100px; color: #FFFFFF'" onclick = "getLocation();">Click Here</span>
+		<span style = "font-family: 'Cabin Sketch'; font-size: 100px; color: #FFFFFF'" onclick = "nextPage();">Click Here</span>
 		<br/>else <br/>
 		<span style = "font-family: 'Cabin Sketch'; font-size: 100px; color: #FFFFFF'" onclick = "signOut();">Sign out</span>
 		<div id="my-signin2" style = "word-spacing: 0px;" class = "center" hidden = "true"></div>

@@ -1,12 +1,12 @@
 	function getLocation() {
 	    if (navigator.geolocation) {
-	        navigator.geolocation.getCurrentPosition(makeCookieAndSave);
+	        navigator.geolocation.getCurrentPosition(getLocationName);
 	    } else { 
 	        x.innerHTML = "Geolocation is not supported by this browser.";
 	    }
 	}
-  function getLocationName(lati,lungi,id){
-    var pos = {lat : lati,lng : lungi};
+  function getLocationName(position,id){
+    var pos = {lat : position.coords.latitude ,lng : position.coords.longitude};
     var geocoder = new google.maps.Geocoder;
     geocoder.geocode({'location': pos}, function(results, status) {
       if (status === 'OK') {
