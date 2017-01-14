@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<title>sudo purge DIRT</title>
-		<link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet"> 
 		 <meta name="google-signin-client_id" content="173388628824-5at6dlpg2k3o0i909007psbjgr46d0eg.apps.googleusercontent.com">
 		<style type="text/css">
 			html { 
@@ -29,7 +29,7 @@
 			}
 		</style>
 	</head>
-	<body style = "font-family:'Special Elite', serif; font-size: 100px; word-spacing: 0px; text-align:center; color: #FFFFFF;">
+	<body style = "font-family:'Cabin Sketch', serif; font-size: 100px; word-spacing: 0px; text-align:center; color: #FFFFFF;">
 		$ sudo purge THRASH;<br/><br/>
 			<div id="my-signin2" style = "word-spacing: 0px;" class = "center"></div>
 		  <script>
