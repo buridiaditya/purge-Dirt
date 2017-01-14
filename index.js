@@ -5,7 +5,21 @@
 	        x.innerHTML = "Geolocation is not supported by this browser.";
 	    }
 	}
-
+  function getLocation(lati,lungi,id){
+    var pos = {lat : lati,lng : lungi};
+    var geocoder = new google.maps.Geocoder;
+    geocoder.geocode({'location': latlng}, function(results, status) {
+      if (status === 'OK') {
+        if (results[1]) { 
+          document.getElementById(id).innerHTML(results[1].formatted_address);
+        } else {
+          window.alert('No results found');
+        }
+      } else {
+        window.alert('Geocoder failed due to: ' + status);
+      }
+    });
+  }
   function makeCookieAndSave(position){
     document.cookie = "lat = " + position.coords.latitude;
     document.cookie = "lang = " + position.coords.longitude;
